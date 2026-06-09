@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow — Task Manager</title>
+</head>
+<body>
+    <header>
+    <h1>Go & Manage</h1>
+    <h3>Control your flow. Manage your time.</h3>
+    </header>
+
+    <main>
+        <section aria-label="Add task">
+        <form id="task-form">
+
+            <label for="title">Title</label>
+            <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Enter task title"
+                required
+            >
+
+            <label for="description">Description</label>
+            <textarea
+                id="description"
+                name="description"
+                placeholder="Enter task description"
+            ></textarea>
+
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="status">Status</label>
+            <select id="status" name="status">
+                <option value="pending">Pending</option>
+                <option value="in-progress">In Progress</option>
+                <option value="done">Done</option>
+            </select>
+
+            <label for="dueDate">Due Date</label>
+            <input
+                type="date"
+                id="dueDate"
+                name="dueDate"
+            >
+            <p id="message"></p>
+
+            <button type="submit">Add Task</button>
+
+        </form>
+        </section>
+        <section aria-label="Task list">
+            <ul id="task-list"></ul>
+        </section>
+    </main>
+<script src="js/app.js" defer></script>
+</body>
+</html>
